@@ -74,6 +74,8 @@ body {
 
 img {
     display: block;
+    width: 100%;
+    height: auto;
 }
 
 /*Studio page start*/
@@ -279,22 +281,40 @@ line-height: 1.5;
     padding: 112px 0;
     background-color: var(--secondary-bgc);
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url(../images/hero-image.jpg);
+    url(../images/bg_mob@1x.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/bg_mob@2x.jpg);
+    }
+}
+
 @media screen and (min-width: 768px) {
     .hero {
         padding-bottom: 108px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/bg_tab@1x.jpg);
     }
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/bg_tab@2x.jpg);
+    }
+}
 }
 
 @media screen and (min-width: 1200px) {
     .hero {
         padding: 188px 0;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/bg_desk@1x.jpg);
     }
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/bg_desk@2x.jpg);
+    }
+}
 }
 
 .hero-title {

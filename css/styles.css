@@ -96,12 +96,11 @@ img {
 }
 
 .container {
-    min-width: 320px;
     max-width: 428px;
     margin-right: auto;
     margin-left: auto;
-    padding-right: 16px;
-    padding-left: 16px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 @media screen and (min-width: 768px) {
@@ -113,8 +112,6 @@ img {
 @media screen and (min-width: 1200px) {
     .container {
         max-width: 1158px;
-        padding-right: 15px;
-        padding-left: 15px;
     }
 }
     
@@ -203,7 +200,7 @@ img {
 
 @media screen and (min-width: 1200px) {
     .nav-link.current::after {
-        bottom: -4px;
+        bottom: -5px;
     }
 }
 
@@ -534,9 +531,8 @@ line-height: 1.5;
     .team-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding-right: 93px;
-    padding-left: 93px;
+    justify-content: center;
+    column-gap: 24px;
     row-gap: 64px;
     }
 }
@@ -635,22 +631,16 @@ line-height: 1.5;
 .customers-wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     margin-right: auto;
     margin-left: auto;
     row-gap: 72px;
+    column-gap: 16px;
 }
 
 @media screen and (min-width: 768px) {
     .customers-wrapper {
-        padding-right: 93px;
-        padding-left: 93px;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .customers-wrapper {
-        padding: 0;
+        column-gap: 24px;
     }
 }
 
@@ -660,7 +650,7 @@ line-height: 1.5;
 
 @media screen and (min-width: 768px) {
     .customers {
-    flex-basis: calc((100% - 2 * 24px) / 3);
+    flex-basis: calc((100% - 234px) / 3);
     }
 }
 
@@ -723,6 +713,10 @@ line-height: 1.5;
     }
 }
 
+.footer-flex {
+    margin-bottom: 72px;
+}
+
 @media screen and (min-width: 768px) {
     .footer-flex {
         display: flex;
@@ -745,6 +739,7 @@ line-height: 1.5;
 @media screen and (min-width: 768px) {
     .footer-content {
         margin-right: 24px;
+        margin-bottom: 0;
     }
 }
 
@@ -768,9 +763,6 @@ line-height: 1.5;
 }
 
 .logo-1 {
-    margin-bottom: 16px;
-    padding-top: 16px;
-    padding-bottom: 16px;
     color: var(--footer-studio-color);
     font-weight: 800;
     font-size: 18px;
@@ -783,10 +775,6 @@ line-height: 1.5;
     color: var(--footer-text-color);
     line-height: 1.5;
     letter-spacing: 0.02em;
-}
-
-.footer-wrapper {
-    margin-bottom: 72px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1141,13 +1129,19 @@ line-height: 1.5;
     position: absolute;
     top: 96px;
     left: 50%;
-    width: 392px;
+    width: 95%;
     height: 584px;
     padding: 72px 16px 24px;
     border-radius: 4px;
     background-color: var(--modal-bgc);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     transform: translate(-50%, 0px);
+}
+
+@media screen and (min-width: 428px) {
+    .modal {
+        width: 392px;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -1394,18 +1388,21 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 .mobile-address .tel-link {
 font-weight: 700;
-font-size: 36px;
+font-size: 25px;
 line-height: 1.11;
 letter-spacing: 0.02em;
 transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+color: var(--web-color);
+}
+
+@media screen and (min-width: 428px) {
+    .mobile-address .tel-link {
+        font-size: 36px;
+    }
 }
 
 .mobile-address {
     margin-bottom: 48px;
-}
-
-.mobile-address .tel-link:hover {
-   color: var(--web-color);
 }
 
 .mobile-address .mail-link {

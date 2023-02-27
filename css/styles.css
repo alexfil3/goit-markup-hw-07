@@ -713,8 +713,11 @@ line-height: 1.5;
     }
 }
 
-.footer-flex {
+
+@media screen and (max-width: 1199px) {
+    .footer-flex {
     margin-bottom: 72px;
+}
 }
 
 @media screen and (min-width: 768px) {
@@ -1130,7 +1133,7 @@ line-height: 1.5;
     top: 96px;
     left: 50%;
     width: 95%;
-    height: 584px;
+    min-height: 584px;
     padding: 72px 16px 24px;
     border-radius: 4px;
     background-color: var(--modal-bgc);
